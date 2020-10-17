@@ -18,6 +18,12 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		6C47FAAD4B15463D932DA968 /* BalooPaaji2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A81ADDBADF624E5693C6CD04 /* BalooPaaji2-Regular.ttf */; };
 		FF4CBB3F56044F64ABDCE393 /* CirceRounded-Alt-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8BDBA588FCFD4534A1C3DC8B /* CirceRounded-Alt-Bold.otf */; };
+		6C6A6AAD98B64DA2B09039FE /* Baloo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 878CB363C9A6455EA8229357 /* Baloo-Regular.ttf */; };
+		70C668741ABF4C9A9EC0BA3A /* DidactGothic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 54764959B95948EBB2FEA5B9 /* DidactGothic.otf */; };
+		F29F556DFDAA43AB95DE777E /* BalooBhaina2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55751854AE2048C298FBA6D5 /* BalooBhaina2-Regular.ttf */; };
+		1F6179D1FB3543E29CF92D6D /* BetmRounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0624C9E6BA9C47858297B9FB /* BetmRounded-Regular.otf */; };
+		F6BE6099D25C4A48BCA06C2D /* BhavukaRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B351422EBD524B7B9FB5C0D3 /* BhavukaRegular.ttf */; };
+		3BC1892FCE5F45BAB50DCFF8 /* Baloo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C9503D6F93846BAA63EA2FE /* Baloo2-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,12 @@
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		A81ADDBADF624E5693C6CD04 /* BalooPaaji2-Regular.ttf */ = {isa = PBXFileReference; name = "BalooPaaji2-Regular.ttf"; path = "../app/assets/fonts/BalooPaaji2-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		8BDBA588FCFD4534A1C3DC8B /* CirceRounded-Alt-Bold.otf */ = {isa = PBXFileReference; name = "CirceRounded-Alt-Bold.otf"; path = "../app/assets/fonts/CirceRounded-Alt-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		878CB363C9A6455EA8229357 /* Baloo-Regular.ttf */ = {isa = PBXFileReference; name = "Baloo-Regular.ttf"; path = "../app/assets/fonts/Baloo-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		54764959B95948EBB2FEA5B9 /* DidactGothic.otf */ = {isa = PBXFileReference; name = "DidactGothic.otf"; path = "../app/assets/fonts/DidactGothic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		55751854AE2048C298FBA6D5 /* BalooBhaina2-Regular.ttf */ = {isa = PBXFileReference; name = "BalooBhaina2-Regular.ttf"; path = "../app/assets/fonts/BalooBhaina2-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0624C9E6BA9C47858297B9FB /* BetmRounded-Regular.otf */ = {isa = PBXFileReference; name = "BetmRounded-Regular.otf"; path = "../app/assets/fonts/BetmRounded-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B351422EBD524B7B9FB5C0D3 /* BhavukaRegular.ttf */ = {isa = PBXFileReference; name = "BhavukaRegular.ttf"; path = "../app/assets/fonts/BhavukaRegular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3C9503D6F93846BAA63EA2FE /* Baloo2-Regular.ttf */ = {isa = PBXFileReference; name = "Baloo2-Regular.ttf"; path = "../app/assets/fonts/Baloo2-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +179,12 @@
 			children = (
 				A81ADDBADF624E5693C6CD04 /* BalooPaaji2-Regular.ttf */,
 				8BDBA588FCFD4534A1C3DC8B /* CirceRounded-Alt-Bold.otf */,
+				878CB363C9A6455EA8229357 /* Baloo-Regular.ttf */,
+				54764959B95948EBB2FEA5B9 /* DidactGothic.otf */,
+				55751854AE2048C298FBA6D5 /* BalooBhaina2-Regular.ttf */,
+				0624C9E6BA9C47858297B9FB /* BetmRounded-Regular.otf */,
+				B351422EBD524B7B9FB5C0D3 /* BhavukaRegular.ttf */,
+				3C9503D6F93846BAA63EA2FE /* Baloo2-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -312,6 +330,12 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				6C47FAAD4B15463D932DA968 /* BalooPaaji2-Regular.ttf in Resources */,
 				FF4CBB3F56044F64ABDCE393 /* CirceRounded-Alt-Bold.otf in Resources */,
+				6C6A6AAD98B64DA2B09039FE /* Baloo-Regular.ttf in Resources */,
+				70C668741ABF4C9A9EC0BA3A /* DidactGothic.otf in Resources */,
+				F29F556DFDAA43AB95DE777E /* BalooBhaina2-Regular.ttf in Resources */,
+				1F6179D1FB3543E29CF92D6D /* BetmRounded-Regular.otf in Resources */,
+				F6BE6099D25C4A48BCA06C2D /* BhavukaRegular.ttf in Resources */,
+				3BC1892FCE5F45BAB50DCFF8 /* Baloo2-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
