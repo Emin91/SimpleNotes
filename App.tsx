@@ -1,24 +1,19 @@
 import React, { FC } from 'react';
 import { KeyboardAvoidingView, StatusBar } from 'react-native';
+import { Provider } from 'react-redux';
 import { colors } from './app/assets/constants/colors';
-import { CreateNoteView } from './app/view/creatNote';
-import { MainView } from './app/view/mainView';
-import { WelcomeView } from './app/view/welcomerView';
+import { RootNavigation } from './app/modules/navigation/rootNavigation';
+import { store } from './app/modules/redux/store';
 
-interface Props {
-    navigation: any;
-    route: any;
-};
-
-const App: FC<Props> = ({ }) => {
+const App: FC = () => {
     return (
-        <KeyboardAvoidingView style={{ flex: 1 }} behavior={undefined}>
+        <Provider store={store}>
             <StatusBar backgroundColor={colors.barColor}/>
-            <MainView />
-            {/* <CreateNoteView /> */}
-          {/* <WelcomeView /> */}
-        </KeyboardAvoidingView>
+            <KeyboardAvoidingView style={{ flex: 1 }} behavior={undefined}>
+                <RootNavigation />
+            </KeyboardAvoidingView>
+        </Provider>
     )
 };
 
-export default App
+export default App;
