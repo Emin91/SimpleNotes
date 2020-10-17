@@ -11,7 +11,7 @@ export const getStyle = () => {
     },
     inputWrapper: {
       height: 50,
-      paddingTop: 5,
+      paddingTop: 1,
       paddingRight: 5,
       borderRadius: 8,
       paddingLeft: 10,
