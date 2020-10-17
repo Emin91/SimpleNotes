@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react'
-import { View } from 'react-native'
+import { View, Text } from 'react-native'
 import { language } from '../../assets/language';
 import { HeaderComponent } from '../../components/header';
 import { MainButtonComponent } from '../../components/mainButton';
@@ -12,7 +12,7 @@ import { getStyle } from './styles';
 export const MainView = () => {
     const styles = useMemo(() => getStyle(), []);
     const [isInputEditable, setIsInputEditable] = useState(true)
-    const { myNotes, search, cannotEdit, addNote } = language;
+    const { myNotes, search, cannotEdit, totalNotes, addNote } = language;
     
     return (
         <View style={styles.container}>
@@ -23,6 +23,6 @@ export const MainView = () => {
                 ? <NoNotesComponent />
                 : <NotesListComponent />}
             <MainButtonComponent title={addNote} onClick={()=>{}} />
-        </View>
-    )
-}
+        </View>    
+        )
+};
