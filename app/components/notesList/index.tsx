@@ -17,7 +17,7 @@ export const NotesListComponent: FC = () => {
                 <NotesItemComponent />
                 <NotesItemComponent />
                 <NotesItemComponent />
-                <NotesItemComponent />
+                <NotesItemComponent /> 
                 <NotesItemComponent />
                 <NotesItemComponent />
                 <NotesItemComponent />
