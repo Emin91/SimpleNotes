@@ -2,7 +2,6 @@ import React, { FC } from 'react';
 import { KeyboardAvoidingView, StatusBar } from 'react-native';
 import { colors } from './app/assets/constants/colors';
 import { MainView } from './app/view/mainView';
-import { WelcomeView } from './app/view/welcomerView';
 
 interface Props {
     navigation: any;
@@ -11,7 +10,7 @@ interface Props {
 
 const App: FC<Props> = ({ }) => {
     return (
-        <KeyboardAvoidingView style={{ flex: 1 }} behavior={"padding"}>
+        <KeyboardAvoidingView style={{ flex: 1 }} behavior={undefined}>
             <StatusBar backgroundColor={colors.barColor}/>
             <MainView />
           {/* <WelcomeView /> */}
