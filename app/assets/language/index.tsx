@@ -6,8 +6,10 @@ export const language = {
     totalNotes: 'Total notes',
     getStarted: 'Get Started',
     search: 'Search something..',
+    titleEmpty: 'Title is empty',
     createNote: 'Create your note',
     cannotEdit: 'You have no notes',
     addYourFirstNote: 'Add your first note!',
     welcomeText: 'Create your personal notes anytime with ease',
+    fillField: 'If the text is complete, the title needs to be filled. Please fill in the title.',
 }
