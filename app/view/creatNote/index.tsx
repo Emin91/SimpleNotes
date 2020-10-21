@@ -24,8 +24,8 @@ export const CreateNoteView: FC<Props> = ({ navigation, route }) => {
     const { title, titleEmpty, fillField, save, edit, createNote } = language;
     const idFromState: number = useSelector(selectId, shallowEqual);
     const currentNote = isEdit && useSelector(selectNotesById(id), shallowEqual);
-    const [titleValue, setTitleValue] = useState(currentNote.title);
-    const [descriptionValue, setDescriptionValue] = useState(currentNote.description);
+    const [titleValue, setTitleValue] = useState(currentNote.title || '');
+    const [descriptionValue, setDescriptionValue] = useState(currentNote.description || '');
     const [isFavorite, setIsFavorite] = useState(false);
     const dispatch = useDispatch();
     let dropDownAlertRef = useRef();
@@ -41,18 +41,19 @@ export const CreateNoteView: FC<Props> = ({ navigation, route }) => {
 
     const onSave = () => {
         const payload = {titleI: titleValue, descriptionI: descriptionValue, isFavI: isFavorite, idI: idFromState + 1};
-        if(!titleValue.trim() && !descriptionValue.trim()) {
+        if(!titleValue && !descriptionValue) {
             navigation.navigate('MainView');
         } else if(titleValue.trim() && !descriptionValue.trim()) {
             dispatch(startSaga(payload));
             navigation.navigate('MainView');
-        } else if(descriptionValue && titleValue) {
-            console.log('filled');
+        } else if(descriptionValue.trim() && titleValue.trim()) {
             dispatch(startSaga(payload));
             navigation.navigate('MainView');
-        } else if(descriptionValue) {
+        } else if(descriptionValue.trim()) {
             showAlert('info', titleEmpty, fillField);
-        };
+        } else if(!titleValue.trim() && !descriptionValue.trim()) {
+            navigation.navigate('MainView');
+        }
     };
 
     return (
@@ -77,3 +78,6 @@ export const CreateNoteView: FC<Props> = ({ navigation, route }) => {
         </View>    
         )
 };
+
+
+
