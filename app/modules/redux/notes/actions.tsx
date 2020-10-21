@@ -33,3 +33,11 @@ export const addToFavorites = (payload: number) => {
 export const noteEdit = (payload: object) => {
     return { type: 'NOTE_ITEM_EDIT', payload };
 };
+
+export const sortList = () => {
+    return { type: 'SORT_NOTES_LIST' };
+};
+
+export const sortedList = (payload: any) => {
+    return { type: 'SORTED_NOTES_LIST', payload };
+};

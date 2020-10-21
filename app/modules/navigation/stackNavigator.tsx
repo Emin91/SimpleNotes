@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { MainView } from '../../view/mainView';
+import  MainView  from '../../view/mainView';
 import { WelcomeView } from '../../view/welcomerView';
 import { CreateNoteView } from '../../view/creatNote';
 

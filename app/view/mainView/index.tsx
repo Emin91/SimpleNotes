@@ -1,12 +1,12 @@
-import React, { FC, useMemo, useState } from 'react'
-import { View, StatusBar } from 'react-native'
+import React, { FC, memo, useMemo, useState } from 'react';
+import { View, StatusBar } from 'react-native';
 import { shallowEqual, useSelector } from 'react-redux';
 import { colors } from '../../assets/constants/colors';
 import { language } from '../../assets/language';
 import { HeaderComponent } from '../../components/header';
 import { MainButtonComponent } from '../../components/mainButton';
 import { NoNotesComponent } from '../../components/noNotes';
-import { NotesListComponent } from '../../components/notesList';
+import  NotesListComponent  from '../../components/notesList';
 import { SearchBarComponent } from '../../components/searchBar';
 import { TotalNotesComponent } from '../../components/totalNotes';
 import { selectNotesList } from '../../modules/redux/notes/selectors';
@@ -16,7 +16,7 @@ interface Props {
     navigation: any;
 };
 
-export const MainView: FC<Props> = ({ navigation }) => {
+const MainView: FC<Props> = ({ navigation }) => {
     const styles = useMemo(() => getStyle(), []);
     const [isInputEditable, setIsInputEditable] = useState(true);
     const { myNotes, search, cannotEdit, addNote } = language;
@@ -33,9 +33,11 @@ export const MainView: FC<Props> = ({ navigation }) => {
             <SearchBarComponent hint={isInputEditable ? search : cannotEdit} isEditable={isInputEditable} />
             <TotalNotesComponent count={content.length} />
             {content.length 
-                ? <NotesListComponent />
+                ? <NotesListComponent/>
                 : <NoNotesComponent />}
             <MainButtonComponent title={addNote} onClick={onAddPress} />
         </View>    
         )
 };
+
+export default memo(MainView);

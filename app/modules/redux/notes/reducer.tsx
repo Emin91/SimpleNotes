@@ -44,6 +44,11 @@ export const notesData = (state: notesI = initState, action: { type: string, pay
                 ...state, 
                 notesList: state.notesList.filter((item) => item.id !== payload),
             };     
+        case 'SORTED_NOTES_LIST': 
+            return { 
+                ...state, 
+                notesList:  payload,
+            };     
         case 'SET_ALL_NOTES':
             const notesList = [...state.notesList, payload]
             return {

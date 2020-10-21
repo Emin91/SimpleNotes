@@ -8,8 +8,8 @@ import { EditIcon } from '../../assets/svg/editIcon';
 import { FavIcon } from '../../assets/svg/favIcon';
 import { addToFavorites, deleteNotesList } from '../../modules/redux/notes/actions';
 import { getStyle } from './styles';
+
 interface Props { 
-    notesList: any;
     title: string; 
     description: string; 
     isFavorite: boolean;
@@ -18,7 +18,7 @@ interface Props {
 
 const date = '11 mart 2020';
 
-export const NotesItemComponent: FC<Props> = ({ title, description, isFavorite, id, notesList }) => {
+export const NotesItemComponent: FC<Props> = ({ title, description, isFavorite, id }) => {
     const styles = useMemo(() => getStyle(), []);
     const dispatch = useDispatch();
     const navigation = useNavigation();
