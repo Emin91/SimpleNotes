@@ -1,5 +1,6 @@
 export const language = {
     save: 'Save',
+    edit: 'Edit',
     title: 'Title',
     myNotes: 'My notes',
     addNote: 'Add note',

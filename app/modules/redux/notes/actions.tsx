@@ -21,3 +21,15 @@ export const setNotesIsFavorite = (payload: boolean) => {
 export const setNotesList = (payload: object) => {
     return { type: 'SET_ALL_NOTES', payload };
 };
+
+export const deleteNotesList = (payload: number) => {
+    return { type: 'DELETE_NOTES_ITEM', payload };
+};
+
+export const addToFavorites = (payload: number) => {
+    return { type: 'ADD_TO_FAVORITES', payload };
+};
+
+export const noteEdit = (payload: object) => {
+    return { type: 'NOTE_ITEM_EDIT', payload };
+};

@@ -1,12 +1,13 @@
+import { useNavigation } from '@react-navigation/native';
 import React, { FC, useMemo } from 'react';
 import { View, Text, Pressable } from 'react-native';
+import { useDispatch } from 'react-redux';
 import { colors } from '../../assets/constants/colors';
 import { DeleteIcon } from '../../assets/svg/deleteIcon';
 import { EditIcon } from '../../assets/svg/editIcon';
 import { FavIcon } from '../../assets/svg/favIcon';
+import { addToFavorites, deleteNotesList } from '../../modules/redux/notes/actions';
 import { getStyle } from './styles';
-
-const date = '11 mart 2020';
 interface Props { 
     notesList: any;
     title: string; 
@@ -15,9 +16,25 @@ interface Props {
     id: number;
 };
 
+const date = '11 mart 2020';
+
 export const NotesItemComponent: FC<Props> = ({ title, description, isFavorite, id, notesList }) => {
     const styles = useMemo(() => getStyle(), []);
-    
+    const dispatch = useDispatch();
+    const navigation = useNavigation();
+
+    const onEditPress = () => {
+        navigation.navigate('CreateNote', {id, isEdit: true});
+    };
+
+    const onFavoritePress = () => {
+        dispatch(addToFavorites(id));
+    };
+
+    const onDeletePress = () => {
+        dispatch(deleteNotesList(id));
+    };
+
     return (
         <View style={styles.container}>
             <View style={styles.favWrapper}>
@@ -30,13 +47,13 @@ export const NotesItemComponent: FC<Props> = ({ title, description, isFavorite, 
                         <Text style={styles.dateText}>{date} {id}</Text>
                     </View>
                     <View style={styles.iconsWrapper}>
-                        <Pressable style={({pressed}) => [{opacity: pressed ? 0.5 : 1}]}>
+                        <Pressable onPress={onEditPress} style={({pressed}) => [{opacity: pressed ? 0.5 : 1}]}>
                             <EditIcon />
                         </Pressable>
-                        <Pressable style={({pressed}) => [{opacity: pressed ? 0.5 : 1, paddingHorizontal: 3}]}>
+                        <Pressable onPress={onFavoritePress} style={({pressed}) => [{opacity: pressed ? 0.5 : 1, paddingHorizontal: 3}]}>
                             <FavIcon color={isFavorite ? '' : colors.light}/>
                         </Pressable>
-                        <Pressable onPress={()=>{}} style={({pressed}) => [{opacity: pressed ? 0.5 : 1}]}>
+                        <Pressable onPress={onDeletePress} style={({pressed}) => [{opacity: pressed ? 0.5 : 1}]}>
                             <DeleteIcon />
                         </Pressable>                    
                     </View>

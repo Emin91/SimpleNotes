@@ -4,7 +4,7 @@ export interface notesI {
     title: string;
     description: string;
     isFavorite: boolean;
-    notesList: Array<Object>;
+    notesList: Array<any>;
 };
 
 const initState = {
@@ -29,11 +29,26 @@ export const notesData = (state: notesI = initState, action: { type: string, pay
             return { ...state, description: payload};       
         case 'SET_IS_FAVORITE': 
             return { ...state, isFavorite: payload};     
+        case 'NOTE_ITEM_EDIT': 
+            return { 
+                ...state, 
+                notesList: state.notesList.map((item) => item.id === payload.id ? {...item, ...payload } : item),
+            };     
+        case 'ADD_TO_FAVORITES': 
+            return { 
+                ...state, 
+                notesList: state.notesList.map((item) => item.id === payload ? {...item, isFavorite: !item.isFavorite} : item),
+            };     
+        case 'DELETE_NOTES_ITEM': 
+            return { 
+                ...state, 
+                notesList: state.notesList.filter((item) => item.id !== payload),
+            };     
         case 'SET_ALL_NOTES':
             const notesList = [...state.notesList, payload]
             return {
                     ...state,
-                    notesList
+                    notesList,
                 };  
         default:
             return state;
